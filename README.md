@@ -2,7 +2,7 @@
 The vignette is about reading JSON data into R with an example that includes basic exploratory data analysis (summaries and graphs - more details on this later).
 
 
-##What is JSON data
+## What is JSON data
 JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language. [[Ref1](https://www.json.org/)]
 
 JSON is built on two parts:keys and values. Together they make a key/value pair.   
@@ -27,8 +27,8 @@ a date
 undefined      [[Ref3](https://www.w3schools.com/js/js_json_datatypes.asp)]    
     
     
-##Reading JSON file into R   
-###R Packages for JSON file
+## Reading JSON file into R   
+### R Packages for JSON file
 There are three popular packages that can be used to read JSON data: rjson, RJSONIO and jsonlite.  
     
 rjson was first implemented for R in 2007 by Alex Couture-Beil. It allows R users to convert JSON objects into R object and vice-verse. There are three functions available under rjson package: fromJSON, toJSON and newJSONParser.   
@@ -42,7 +42,7 @@ Based on the above introduction, we will use jsonlite in this project.
 
 
    
-###Example
+### Example
 When we work on projects using Github as the source code repository, we manage all the issues (bugs), tasks or enhancement features, etc, as ‘issues’ at Github. And of course I want to do some analysis on that data. I mean, it is pretty basic stuff like, “how many issues do we have for each release or milestone ?”, “how many issues are assigned to who ?”, “What is the trend of the incoming and outgoing issues ?”. Luckily, Github lets us extract these data, but the data comes in JSON format.[Ref](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89)       
 
 ```{r, echo = TRUE}
